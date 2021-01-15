@@ -1,0 +1,73 @@
+@import "libs";
+@import "header";
+@import "fonts";
+@import "movie";
+@import "popup";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color:#e4edf4;
+  background-color: #e4edf4;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  &_movie {
+    margin-top: 50px;
+  }
+  @media (min-width: 1550px) {
+    max-width: 1171px;
+  }
+  @media (max-width: 1100px) {
+    width: 80%;
+  }
+  @media (max-width: 380px) {
+    width: 95%;
+  }
+}
+
+.page-link {
+  transition: opacity .2s linear;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.button {
+  border-radius: 20px;
+  outline: none;
+  width: 140px;
+  height: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2.57;
+  letter-spacing: 1.05px;
+  color: #ffffff;
+}
+
+.button_type_cancel {
+  box-shadow: 0px 1px 0 0 #ff7e70, 0px 5px 10px 0 #ff6e5d;
+  border: solid 1px #ff695a;
+  background-color: #ff7e70;
+  margin-right: 21px;
+}
+
+.button_type_confirm {
+  box-shadow: 0px 1px 0 0 #6fcdff, 0px 5px 10px 0 #6fcdff;
+  border: solid 1px #2fa5e1;
+  background-color: #6ecdfd;
+}

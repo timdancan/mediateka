@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Films library</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="body">
+  
+  <header class="header">
+    <div class="header__logo">
+      <a class="header__link page-link" href="#">
+        <h2 class="header__logo-text">Films library</h2>
+      </a>
+    </div>
+    <nav class="header__nav content">
+      <button class="header__button page-link"><span>Add new film</span></button>
+      <p class="header__button-discr"></p>
+    </nav>
+  </header>
+
+  <div class="popup content">
+    <form class="form" name="popup" novalidate>
+      <h4 class="popup__title">Title</h4>
+      <label class="popup__label"><input type="text" class="popup__input popup__input_add_title" id="input-title" name="title" minlength="4" maxlength="12" required><span class="popup__error" id="input-title-error"></span></label>
+      <h4 class="popup__title">Year</h4>
+      <label class="popup__label"><input type="number" class="popup__input popup__input_add_year" id="input-year" name="year" minlength="4" maxlength="5" required><span class="popup__error" id="input-year-error"></span></label>
+      <h4 class="popup__title">Country</h4>
+      <label class="popup__label"><input type="text" class="popup__input popup__input_add_country" id="input-country" name="country" minlength="3" maxlength="10" required><span class="popup__error" id="input-country-error"></span></label>
+      <h4 class="popup__title">Genre</h4>
+      <label class="popup__label"><input type="text" class="popup__input popup__input_add_genre" id="input-genre" name="genre" minlength="2" maxlength="10" required><span class="popup__error" id="input-genre-error"></span></label>
+      <h4 class="popup__title">Poster(link)</h4>
+      <label class="popup__label"><input type="url" class="popup__input popup__input_add_poster" id="input-poster" name="poster" required><span class="popup__error" id="input-poster-error"></span></label>
+      <h4 class="popup__title">Description</h4>
+      <label class="popup__label"><textarea class="popup__textarea popup__textarea_description" id="input-description" name="description" required></textarea><span class="popup__error" id="input-description-error"></span></label>
+      <h4 class="popup__title">Actors</h4>
+      <label class="popup__label"><textarea class="popup__textarea popup__textarea_actors" id="input-actors" name="actors" required></textarea><span class="popup__error" id="input-actors-error"></span></label>
+      <div class="popup__buttons">
+        <button class="button button_type_cancel page-link" type="reset">Cancel</button>
+        <button class="button button_type_confirm confirm page-link" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+
+  <main>
+
+    <section class="movies"></section>
+
+  </main>
+
+  <template class="template">
+    <div class="movie content content_movie">
+      <div class="movie__container">
+        <div class="movie__img-container">
+          <img src="" alt="movie image" class="movie__img">
+        </div>
+        <div class="movie__content">
+          <h2 class="movie__title"></h2>
+          <p class="movie__about"></p>
+          <div class="movie__information">
+            <div class="movie__points">
+              <p class="movie__description">Country</p>
+              <p class="movie__description">Year</p>
+              <p class="movie__description">Genre</p>
+              <p class="movie__description">Actors</p>
+            </div>
+            <div class="movie__points">
+              <p class="movie__items movie__items_country"></p>
+              <p class="movie__items movie__items_year"></p>
+              <p class="movie__items movie__items_genre"></p>
+              <p class="movie__items movie__items_actors"></p>
+            </div>
+          </div>
+          <div class="popup__buttons popup__buttons_place_movie">
+            <button class="button button_type_cancel page-link">Delete</button>
+            <button class="button button_type_confirm edit page-link">Edit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup content">
+        <form class="form" name="popup" novalidate>
+          <h4 class="popup__title">Title</h4>
+          <label class="popup__label"><input type="text" class="popup__input popup__input_add_title" id="input-title" name="title" minlength="4" maxlength="12" required><span class="popup__error" id="input-title-error"></span></label>
+          <h4 class="popup__title">Year</h4>
+          <label class="popup__label"><input type="number" class="popup__input popup__input_add_year" id="input-year" name="year" minlength="4" maxlength="5" required><span class="popup__error" id="input-year-error"></span></label>
+          <h4 class="popup__title">Country</h4>
+          <label class="popup__label"><input type="text" class="popup__input popup__input_add_country" id="input-country" name="country" minlength="3" maxlength="10" required><span class="popup__error" id="input-country-error"></span></label>
+          <h4 class="popup__title">Genre</h4>
+          <label class="popup__label"><input type="text" class="popup__input popup__input_add_genre" id="input-genre" name="genre" minlength="2" maxlength="10" required><span class="popup__error" id="input-genre-error"></span></label>
+          <h4 class="popup__title">Poster(link)</h4>
+          <label class="popup__label"><input type="url" class="popup__input popup__input_add_poster" id="input-poster" name="poster" required><span class="popup__error" id="input-poster-error"></span></label>
+          <h4 class="popup__title">Description</h4>
+          <label class="popup__label"><textarea class="popup__textarea popup__textarea_description" id="input-description" name="description" required></textarea><span class="popup__error" id="input-description-error"></span></label>
+          <h4 class="popup__title">Actors</h4>
+          <label class="popup__label"><textarea class="popup__textarea popup__textarea_actors" id="input-actors" name="actors" required></textarea><span class="popup__error" id="input-actors-error"></span></label>
+          <div class="popup__buttons">
+            <button class="button button_type_cancel cancel page-link" type="reset">Cancel</button>
+            <button class="button button_type_confirm page-link" type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="movie__comments">
+        <button class="movie__comments-link page-link">Comments:<span class="movie__span"></span></button>
+        <div class="movie__popup">
+          <p class="movie__comment">Test comment 1</p>
+          <p class="movie__comment">Test comment 1</p>
+          <form class="movie__form form" novalidate>
+            <label class="movie__label"><input type="text" class="movie__input" id="input-comment" name="comment" minlength="2" maxlength="100" placeholder="Add your comment" required><span class="popup__error" id="input-comment-error"></span></label>
+            <button class="button button_type_confirm page-link" type="submit">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="js/validate.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
